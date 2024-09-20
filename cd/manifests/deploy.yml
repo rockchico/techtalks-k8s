@@ -15,6 +15,9 @@ spec:
       containers:
       - name: nest
         image: quay.io/rockchico2/techtalks-app:0.1.0
+        env:
+          - name: MINHA_ENV_VAR
+            value: 'Bazinga!'
         resources:
           limits:
             cpu: "1"
