@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-nestjs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app-nestjs
+  template:
+    metadata:
+      labels:
+        app: app-nestjs
+    spec:
+      containers:
+      - name: nest
+        image: quay.io/rockchico2/meu-nestjs:1.0.0
+
+
+        
+        resources:
+          limits:
+            cpu: "1"
+            memory: "128Mi"
+          requests:
+            cpu: "0.5"
+            memory: "128Mi"
