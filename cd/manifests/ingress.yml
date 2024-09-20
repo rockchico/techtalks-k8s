@@ -1,18 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: meu-nestjs
+  name: techtalks-app
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: traefik
   rules:
-    - http:
+    - host: techtalks-app.rockchico.dev
+      http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: meu-nestjs
+                name: techtalks-app
                 port:
                   number: 3000

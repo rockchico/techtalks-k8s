@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: meu-nestjs
+  name: techtalks-app
 spec:
   replicas: 3
   selector:
@@ -14,10 +14,7 @@ spec:
     spec:
       containers:
       - name: nest
-        image: quay.io/rockchico2/meu-nestjs:1.0.0
-
-
-        
+        image: quay.io/rockchico2/techtalks-app:0.1.0
         resources:
           limits:
             cpu: "1"
