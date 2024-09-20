@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nest
-        image: quay.io/rockchico2/techtalks-app:0.1.0
+        image: quay.io/<REPO_USER>/<REPO>:<TAG>
         env:
           - name: MINHA_ENV_VAR
             value: 'Bazinga!'
