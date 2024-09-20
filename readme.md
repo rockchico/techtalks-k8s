@@ -1,8 +1,8 @@
 
 # Requisitos
 
-- (Docker)[https://docs.docker.com/desktop/install/windows-install/]
-- (Kubectl)[https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/]
+- [Docker](https://docs.docker.com/desktop/install/windows-install/)
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
 - Cluster Kubernetes
 
 
