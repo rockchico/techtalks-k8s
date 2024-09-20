@@ -13,23 +13,30 @@
 ![alt text](1-quay.png)
 
 ## Login no registro
-
+```sh
 docker login quay.io
+```
 
 ## Build
 
-> substituir <REPO_USER> E <REPO> pelo usuário e repositório criados no registro quay
+> substituir \<REPO_USER\> e \<REPO\> pelo usuário e repositório criados no registro quay
 > <TAG> identifica a versão da imagem
 
+```sh
 docker build -f ./ci/Dockerfile ./ci -t quay.io/<REPO_USER>/<REPO>:<TAG>
+```
 
 ## Rodar o container localmente e verificar se ele está iniciando a aplicação
 
+```sh
 docker run -it -p 3000:3000 quay.io/<REPO_USER>/<REPO>:<TAG>
+```
 
 ## Push da imagem pro registro 
 
+```sh
 docker push quay.io/<REPO_USER>/<REPO>:<TAG>
+```
 
 ## Deploy no cluster kubernetes
 
@@ -39,6 +46,8 @@ docker push quay.io/<REPO_USER>/<REPO>:<TAG>
 
 > aplicar no cluster k8s
 
+```sh
 kubeclt apply -f cd/manifests/deploy.yml
+```
 
 
